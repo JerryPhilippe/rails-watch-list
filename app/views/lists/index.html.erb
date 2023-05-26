@@ -1,0 +1,16 @@
+<div class="banner">
+  <div class="container">
+    <h1>LISTYS</h1>
+    <h2>Save any Movie List at any moment 🍿🍿</h2>
+  </div>
+</div>
+<h2 class="fw-bold text-center my-4">My Lists</h2>
+<div class="cards">
+  <% @lists.each do |list|  %>
+    <%= link_to list_path(list) do %>
+      <div class="card-category">
+        <%= list.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
