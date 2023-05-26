@@ -8,7 +8,7 @@
 <div class="cards">
   <% @lists.each do |list|  %>
     <%= link_to list_path(list) do %>
-      <div class="card-category">
+      <div class="card-category"  style="background-image: url('<%= (cl_image_path list.image.key) if list.image.key != nil %>')">
         <%= list.name %>
       </div>
     <% end %>
